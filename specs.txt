@@ -1,4 +1,0 @@
-1. program does nothing to non-alphabetical characters, since they don't contain consonants or vowels
-2. program adds "ay" to the end of single-letter words beginning with a vowel
-3. for words beginning with 1+ consonants, the first consecutive consonants are moved to the end, and "ay" is added
-4. 
