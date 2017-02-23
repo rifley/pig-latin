@@ -12,7 +12,7 @@ var pigLatinTranslator = function(input){
     } else{
       for(var index = 0; index < word.length; index++){
         console.log(word);
-          if(word.charAt(index+1).match(/[aeiouy]/i)){
+          if(word.charAt(index+1).match(/[aeioy]/i) || (word.charAt(index).match(/[^q]/i) && word.charAt(index+1).match(/u/i))){
             temp = word.slice(0, index+1);
             word = word.slice(index+1) + temp;
             console.log(word);
@@ -20,11 +20,6 @@ var pigLatinTranslator = function(input){
           } else if(word.charAt(index).match(/[qu]/i)){
             temp = word.slice(0, index + 2);
             word = word.slice(index + 2) + temp;
-            index = word.length;
-          } else if(word.charAt(index+1) === "u"){
-            temp = word.slice(0, index+1);
-            word = word.slice(index+1) + temp;
-            console.log(word);
             index = word.length;
           }
           console.log("found a consonant!" + word.charAt(index));
